@@ -7,7 +7,6 @@ function App() {
     <div>
       <Navbar></Navbar>
       <main>
-        <h1 className="font-bold">Hello Weather!</h1>
         <Weather></Weather>
       </main>
     </div>
