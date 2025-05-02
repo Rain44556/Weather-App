@@ -2,6 +2,15 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@layer components {
+    .section {
+      @apply 
+      w-full max-w-4xl mx-auto my-10 shadow-xl rounded-2xl backdrop-blur-md bg-gradient-to-r from-[#e0dfdc] to-[#afd5da] border border-[#43ccd5]
+      dark:border dark:border-gray-400 dark:bg-gradient-to-r dark:from-[#212931] dark:to-[#56728f]
+      ;
+    }
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
