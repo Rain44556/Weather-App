@@ -34,7 +34,7 @@ const Navbar = () => {
     <div className="py-10">
 
       <div className="flex gap-5 py-3 px-5 items-center max-w-lg mx-auto justify-between mb-5">
-        <h1 className="text-2xl sm:text-3xl text-[#006A71] font-bold">Hello Weather!</h1>
+        <h1 className="text-2xl sm:text-3xl dark:text-gray-200 text-[#006A71] font-bold">Hello Weather!</h1>
         <button 
         onClick={()=> setTheme(theme === "light" ? "dark" : "light")}
         className="border w-10 h-10 rounded-full cursor-pointer text-[#006A71] dark:text-gray-100
