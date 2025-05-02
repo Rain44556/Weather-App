@@ -39,6 +39,7 @@ case FETCH_WEATHER_REJECTED:
   }
 }
 function updateSearchHistory (history, payload) {
+  console.log("i am in reducer")
   const exists = history.some(item => item.id === payload.id);
   if (!exists) {
     const historyItem = {

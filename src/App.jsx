@@ -1,14 +1,17 @@
-import './App.css'
-import Weather from './components/Weather/Weather'
+import "./App.css";
+import Navbar from "./components/shared/Navbar";
+import Weather from "./components/Weather/Weather";
 
 function App() {
-
   return (
-    <>
-     <h1 className='font-bold'>Hello Weather!</h1>
-   <Weather></Weather>
-    </>
-  )
+    <div>
+      <Navbar></Navbar>
+      <main>
+        <h1 className="font-bold">Hello Weather!</h1>
+        <Weather></Weather>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
