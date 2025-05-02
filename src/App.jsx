@@ -1,5 +1,6 @@
 import "./App.css";
 import Hero from "./components/Hero/Hero";
+import Footer from "./components/shared/Footer";
 import Navbar from "./components/shared/Navbar";
 import TopDestinations from "./components/TopDestinations/TopDestinations";
 import Weather from "./components/Weather/Weather";
@@ -13,6 +14,7 @@ function App() {
         <TopDestinations></TopDestinations>
         <Weather></Weather>
       </main>
+      <Footer></Footer>
     </div>
   );
 }
