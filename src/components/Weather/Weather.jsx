@@ -1,13 +1,20 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { HiOutlineArrowPathRoundedSquare } from "react-icons/hi2";
+import Home from "../../pages/Home/Home";
+import Loading from "../Loading/Loading";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 
 const Weather = () => {
-  const { data, status, searchHistory, error } = useSelector((state) => state.weather);
+  const { data, status, searchHistory, error } = useSelector(
+    (state) => state.weather
+  );
 
   return (
     <div className="weather-section items-center text-center">
+
+      {!data && !error && status !== "loading" && <Home></Home>}
+      
       <div className="weather-temperature">
         <h1>25°C</h1>
       </div>
@@ -20,23 +27,24 @@ const Weather = () => {
         <h1>rainy</h1>
       </div>
       {/* {console.log(data)} */}
-      {data && 
-      <div>
-        <h1>searched</h1>
-    </div>
-        }
-        {
-          error && (
-            <div className="backdrop-blur-md text-left rounded-2xl shadow-xl bg-red-800 dark:bg-rose-700/50 p-7 max-w-lg mx-auto justify-center items-center">
-              <p className="text-gray-300 font-bold text-lg my-1">Weather's taking a coffee break 😂... please try again shortly!</p>
-            <p className="mb-3 text-gray-300">{error}</p>
-            <button
-            className="flex gap-2 underline text-white cursor-pointer items-center">
-              <HiOutlineArrowPathRoundedSquare className="text-xl" /> Refresh
-              </button>
-            </div>
-          )
-        }
+      {data && (
+        <div>
+          <h1>searched</h1>
+        </div>
+      )}
+
+
+      {/* error-handling */}
+      {error && (
+       <ErrorMessage error={error}></ErrorMessage>
+      )}
+
+      {/* loading */}
+      {
+        status === "loading" && (
+         <Loading></Loading>
+        )
+      }
     </div>
   );
 };
