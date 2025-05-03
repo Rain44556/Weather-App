@@ -20,13 +20,12 @@
     animation: float 3s ease-in-out infinite;
   }
 
-  /* Shimmer-effect */
-.shimmer {
+.shimmer-effect {
   position: relative;
   overflow: hidden;
 }
 
-.shimmer::after {
+.shimmer-effect::after {
   content: '';
   position: absolute;
   top: 0;

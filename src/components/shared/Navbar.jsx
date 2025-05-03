@@ -53,7 +53,7 @@ const Navbar = () => {
           onChange={searchCityName}
           type="search"
           id="search"
-          className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gradient-to-r from-[#9ACBD0] to-[#F2EFE7] dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 shadow-md"
+          className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gradient-to-r from-[#9ACBD0] to-[#F2EFE7] dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-500 dark:text-gray-700 shadow-md"
           placeholder="Search City...."
           required
         />

@@ -16,7 +16,7 @@ const WeatherByte = () => {
         setInfo(weatherInfo[Math.floor(Math.random() * weatherInfo.length)]);
     }, [weatherInfo]);
 
-  return <div className="section flex gap-10 p-10 items-center relative overflow-hidden shimmer">
+  return <div className="section shimmer-effect relative overflow-hidden flex gap-10 p-10 items-center">
    <div><img src={ideaImg} alt="" /></div>
    <div>
         <h4 className="font-bold mb-2 text-xl">Did You Know?</h4>
