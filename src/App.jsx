@@ -4,6 +4,7 @@ import Footer from "./components/shared/Footer";
 import Navbar from "./components/shared/Navbar";
 import TopDestinations from "./components/TopDestinations/TopDestinations";
 import Weather from "./components/Weather/Weather";
+import WeatherByte from "./components/WeatherByte/WeatherByte";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Hero></Hero>
         <TopDestinations></TopDestinations>
+        <WeatherByte></WeatherByte>
         <Weather></Weather>
       </main>
       <Footer></Footer>
