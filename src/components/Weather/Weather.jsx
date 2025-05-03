@@ -3,6 +3,9 @@ import { useSelector } from "react-redux";
 import Home from "../../pages/Home/Home";
 import Loading from "../Loading/Loading";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import { weatherIcons } from "../../utls/weatherIcons";
+import History from "../History/History"
+import WeatherInfo from "../../pages/WeatherInfo/WeatherInfo";
 
 
 const Weather = () => {
@@ -14,24 +17,16 @@ const Weather = () => {
     <div className="weather-section items-center text-center">
 
       {!data && !error && status !== "loading" && <Home></Home>}
-      
-      <div className="weather-temperature">
-        <h1>25°C</h1>
-      </div>
+      {searchHistory.length > 0 && (<History></History>)}
+
+      {data && !error && (
+        <div className="weather-data">
+        <WeatherInfo></WeatherInfo>
+      </div>)}
 
       <div>
         <h1>{searchHistory.length}</h1>
       </div>
-
-      <div className="weather-condition">
-        <h1>rainy</h1>
-      </div>
-      {/* {console.log(data)} */}
-      {data && (
-        <div>
-          <h1>searched</h1>
-        </div>
-      )}
 
 
       {/* error-handling */}

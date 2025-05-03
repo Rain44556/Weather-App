@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <div className="py-10">
 
-      <div className="flex gap-5 py-3 px-5 items-center max-w-lg mx-auto justify-between mb-5">
+      <div className="flex gap-5 py-3 items-center max-w-lg mx-auto justify-between mb-5">
         <h1 className="text-2xl sm:text-3xl dark:text-gray-200 text-[#006A71] font-bold">Hello Weather!</h1>
         <button 
         onClick={()=> setTheme(theme === "light" ? "dark" : "light")}
@@ -53,7 +53,7 @@ const Navbar = () => {
           onChange={searchCityName}
           type="search"
           id="search"
-          className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gradient-to-r from-[#9ACBD0] to-[#F2EFE7] dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-500 dark:text-gray-700 shadow-md"
+          className="shadow-xl block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gradient-to-r from-[#9ACBD0] to-[#F2EFE7] dark:placeholder-gray-300 dark:text-gray-100 dark:border dark:border-gray-400 dark:bg-gradient-to-r dark:from-[#404d5b] dark:to-[#56728f]"
           placeholder="Search City...."
           required
         />

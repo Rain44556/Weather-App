@@ -1,14 +1,7 @@
 import React from "react";
+import { cities } from "../../utls/cities";
 
 const TopDestinations = () => {
-  const cities = [
-    { name: "New York", country: "US", icon: "🗽" },
-    { name: "London", country: "GB", icon: "🇬🇧" },
-    { name: "Tokyo", country: "JP", icon: "🗼" },
-    { name: "Paris", country: "FR", icon: "🗼" },
-    { name: "Sydney", country: "AU", icon: "🏄" },
-    { name: "Dubai", country: "AE", icon: "🏙️" },
-  ];
   return (
     <div className="section p-10">
       <h1 className="font-bold text-2xl mb-8">Top Destinations</h1>
