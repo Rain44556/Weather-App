@@ -9,7 +9,7 @@ const TopDestinations = () => {
         {cities.map((city, idx) => (
           <button 
           key={idx} 
-          className="group flex gap-5 items-center rounded-xl dark:hover:bg-gray-800 cursor-pointer transition-all duration-300 p-4 backdrop-blur-sm bg-[#9ACBD0] border border-[#43bec7] text-sm font-medium dark:bg-[#37424e] dark:border-gray-700">
+          className="group flex gap-5 items-center rounded-xl dark:hover:bg-gray-800 cursor-pointer transition-all duration-300 p-4 backdrop-blur-sm bg-card">
             <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{city.icon}</span>
             <div className="text-left">
               <p className="font-medium">{city.name}</p>

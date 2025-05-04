@@ -9,6 +9,11 @@
       dark:border dark:border-gray-400 dark:bg-gradient-to-r dark:from-[#404d5b] dark:to-[#56728f]
       ;
     }
+    .bg-card {
+      @apply 
+      bg-[#9ACBD0] border border-[#43bec7] text-sm font-medium dark:bg-[#37424e] dark:border-gray-700
+      ;
+    }
 }
 
 @keyframes float {

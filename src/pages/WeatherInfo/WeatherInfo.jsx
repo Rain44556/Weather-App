@@ -1,13 +1,23 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { weatherIcons } from "../../utls/weatherIcons";
+import { RiHome4Fill } from "react-icons/ri";
+import { IoFlag } from "react-icons/io5";
+import { WiDayWindy } from "react-icons/wi";
+import { IoSpeedometerOutline } from "react-icons/io5";
+
+
+
+
 
 const WeatherInfo = () => {
   const { data } = useSelector((state) => state.weather);
   return (
-    <div className="section px-5 py-10">
+    <div className="section py-10 px-14">
+
       <div className="flex gap-5 flex-col md:flex-row md:justify-between md:items-start">
         <div className="date-location-info">
+
           <div className="flex items-center gap-4">
             <h1 className="text-3xl font-bold text-[#006A71] dark:text-gray-200">
               {data.name}
@@ -42,6 +52,42 @@ const WeatherInfo = () => {
           <p className="text-lg font-medium mt-2 dark:text-gray-200 text-[#064145]">
             Feels like {Math.round(data.main.feels_like)}°
           </p>
+        </div>
+      </div>
+
+
+      <div className="weather-stats grid md:grid-cols-2 gap-4 my-10">
+
+        <div className="weather-pressure items-center rounded-lg md:justify-center flex gap-10 bg-card py-4 px-4">
+          <span className="text-2xl text-teal-800 dark:text-gray-800 rounded-lg bg-[#c9dee0] p-2"><RiHome4Fill /></span>
+          <div className="text-[#006A71] dark:text-gray-200 text-left">
+            <p>Pressure</p>
+            <h2 className="font-bold text-lg">{data.main.pressure} hPa</h2>
+          </div>
+        </div>
+
+        <div className="weather-humidity items-center rounded-lg py-4 md:justify-center flex gap-10 bg-card px-4">
+          <span className="text-2xl text-teal-800 dark:text-gray-800 rounded-lg bg-[#c9dee0] p-2"><IoFlag /></span>
+          <div className="text-[#006A71] dark:text-gray-200 text-left">
+            <p>Humidity</p>
+            <h2  className="font-bold text-lg">{data.main.humidity}%</h2>
+          </div>
+        </div>
+
+        <div className="weather-speed items-center rounded-lg md:justify-center flex gap-10 bg-card py-4 px-4">
+          <span className="text-2xl text-teal-800 dark:text-gray-800 rounded-lg bg-[#c9dee0] p-2"><WiDayWindy /></span>
+          <div className="text-[#006A71] dark:text-gray-200 text-left">
+            <p>Wind speed </p>
+            <h2 className="font-bold text-lg">{data.wind.speed} m/s</h2>
+          </div>
+        </div>
+
+        <div className="weather-visibility items-center rounded-lg py-4 px-4 md:justify-center flex gap-10 bg-card">
+          <span className="text-2xl text-teal-800 dark:text-gray-800 rounded-lg bg-[#c9dee0] p-2"><IoSpeedometerOutline /></span>
+          <div className="text-[#006A71] dark:text-gray-200 text-left">
+            <p className="">Visibility</p>
+            <h2 className="font-bold text-lg">{(data.visibility / 1000).toFixed(1)} km</h2>
+          </div>
         </div>
       </div>
     </div>
