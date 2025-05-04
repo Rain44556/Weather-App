@@ -16,7 +16,7 @@ export const fetchWeather = createAsyncThunk(
             },
           }
         );
-        console.log(response);
+        // console.log(response);
         return response.data;
       } catch (err) {
         let message = 'Failed to fetch weather';

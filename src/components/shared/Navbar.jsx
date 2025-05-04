@@ -18,6 +18,7 @@ const Navbar = () => {
     e.preventDefault();
     if (city.trim()) {
       dispatch(fetchWeather(city));
+      setCity('');
     }
   };
 
@@ -49,21 +50,26 @@ const Navbar = () => {
       </div>
 
       <div className="search-city text-center relative max-w-lg mx-auto">
-        <input
+        
+      <form action="">
+          <input
           onChange={searchCityName}
+          value={city}
           type="search"
           id="search"
-          className="shadow-xl block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gradient-to-r from-[#9ACBD0] to-[#F2EFE7] dark:placeholder-gray-300 dark:text-gray-100 dark:border dark:border-gray-400 dark:bg-gradient-to-r dark:from-[#404d5b] dark:to-[#56728f]"
+          className="shadow-xl block w-full p-4 ps-10 text-sm text-gray-800 border border-gray-300 rounded-lg bg-gradient-to-r from-[#9ACBD0] to-[#F2EFE7] dark:placeholder-gray-300 dark:text-gray-100 dark:border dark:border-gray-400 dark:bg-gradient-to-r dark:from-[#404d5b] dark:to-[#56728f]"
           placeholder="Search City...."
           required
         />
+
         <button
           onClick={handleSearch}
           type="submit"
-          className="cursor-pointer text-[#F2EFE7] absolute end-2.5 bottom-2.5 bg-[#006A71] hover:bg-[#006A71] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-800 dark:hover:bg-gray-800 dark:hover:shadow-2xl"
+          className="cursor-pointer text-[#F2EFE7] absolute end-2.5 bottom-2.5 bg-[#006A71] hover:bg-[#006A71] font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-800 dark:hover:bg-gray-800 dark:hover:shadow-2xl"
         >
           Search
         </button>
+      </form>
       </div>
     </div>
   );

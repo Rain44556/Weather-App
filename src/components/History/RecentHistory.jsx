@@ -15,14 +15,13 @@ const RecentHistory = () => {
         <h1>Recent Searches</h1>
       </div>
 
-      <div className="flex gap-3 mt-7">
+      <div className="grid md:grid-cols-4 gap-3 mt-7">
         {searchHistory
           .filter((item) => item.id !== data.id)
-          .slice(0, 3)
           .map((item) => (
             <div
               key={item.id + item.timestamp}
-              className="min-w-[220px] bg-gradient-to-r from-[#e0dfdc] to-[#afd5da] border border-[#43ccd5]
+              className="min-w-[215px] bg-gradient-to-r from-[#e0dfdc] to-[#afd5da] border border-[#43ccd5]
       dark:border dark:border-gray-400 dark:bg-gradient-to-r dark:from-[#404d5b] dark:to-[#56728f] rounded-sm"
             >
               <button onClick={() => item.name} className="w-full text-left">

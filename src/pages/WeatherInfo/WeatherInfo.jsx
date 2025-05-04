@@ -7,11 +7,10 @@ import { WiDayWindy } from "react-icons/wi";
 import { IoSpeedometerOutline } from "react-icons/io5";
 
 
-
-
-
 const WeatherInfo = () => {
   const { data } = useSelector((state) => state.weather);
+  const statsCSS = "items-center rounded-lg md:justify-center flex gap-10 bg-card py-4 px-4";
+
   return (
     <div className="section py-10 px-14">
 
@@ -58,7 +57,7 @@ const WeatherInfo = () => {
 
       <div className="weather-stats grid md:grid-cols-2 gap-4 my-10">
 
-        <div className="weather-pressure items-center rounded-lg md:justify-center flex gap-10 bg-card py-4 px-4">
+        <div className={`weather-pressure ${statsCSS}`}>
           <span className="text-2xl text-teal-800 dark:text-gray-800 rounded-lg bg-[#c9dee0] p-2"><RiHome4Fill /></span>
           <div className="text-[#006A71] dark:text-gray-200 text-left">
             <p>Pressure</p>
@@ -66,7 +65,7 @@ const WeatherInfo = () => {
           </div>
         </div>
 
-        <div className="weather-humidity items-center rounded-lg py-4 md:justify-center flex gap-10 bg-card px-4">
+        <div className={`weather-humidity ${statsCSS}`} >
           <span className="text-2xl text-teal-800 dark:text-gray-800 rounded-lg bg-[#c9dee0] p-2"><IoFlag /></span>
           <div className="text-[#006A71] dark:text-gray-200 text-left">
             <p>Humidity</p>
@@ -74,7 +73,7 @@ const WeatherInfo = () => {
           </div>
         </div>
 
-        <div className="weather-speed items-center rounded-lg md:justify-center flex gap-10 bg-card py-4 px-4">
+        <div className={`wind-speed ${statsCSS}`}>
           <span className="text-2xl text-teal-800 dark:text-gray-800 rounded-lg bg-[#c9dee0] p-2"><WiDayWindy /></span>
           <div className="text-[#006A71] dark:text-gray-200 text-left">
             <p>Wind speed </p>
@@ -82,7 +81,7 @@ const WeatherInfo = () => {
           </div>
         </div>
 
-        <div className="weather-visibility items-center rounded-lg py-4 px-4 md:justify-center flex gap-10 bg-card">
+        <div className={`weather-visibility ${statsCSS}`}>
           <span className="text-2xl text-teal-800 dark:text-gray-800 rounded-lg bg-[#c9dee0] p-2"><IoSpeedometerOutline /></span>
           <div className="text-[#006A71] dark:text-gray-200 text-left">
             <p className="">Visibility</p>
