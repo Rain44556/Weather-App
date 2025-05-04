@@ -3,9 +3,10 @@ import { useSelector } from "react-redux";
 import Home from "../../pages/Home/Home";
 import Loading from "../Loading/Loading";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
-import { weatherIcons } from "../../utls/weatherIcons";
 import History from "../History/History"
 import WeatherInfo from "../../pages/WeatherInfo/WeatherInfo";
+import RecentHistory from "../History/RecentHistory";
+
 
 
 const Weather = () => {
@@ -14,7 +15,7 @@ const Weather = () => {
   );
 
   return (
-    <div className="weather-section items-center text-center">
+    <div className="weather-app items-center text-center">
 
       {!data && !error && status !== "loading" && <Home></Home>}
       {searchHistory.length > 0 && (<History></History>)}
@@ -24,9 +25,12 @@ const Weather = () => {
         <WeatherInfo></WeatherInfo>
       </div>)}
 
-      <div>
-        <h1>{searchHistory.length}</h1>
-      </div>
+      {/* Recent Searches-shown when viewing weather data */}
+      {
+        data && !error && searchHistory.length > 1 && (
+          <RecentHistory></RecentHistory>
+        )
+      }
 
 
       {/* error-handling */}

@@ -46,7 +46,7 @@ const WeatherInfo = () => {
         </div>
 
         <div className="temp-info text-center md:text-right">
-          <p className="text-8xl md:text-8xl font-bold text text-[#064145] dark:text-gray-200">
+          <p className="text-8xl md:text-8xl font-bold text-[#064145] dark:text-gray-200">
             {Math.round(data.main.temp)}°
           </p>
           <p className="text-lg font-medium mt-2 dark:text-gray-200 text-[#064145]">
