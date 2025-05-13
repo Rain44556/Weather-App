@@ -15,13 +15,13 @@ const TopDestinations = () => {
   return (
     <div className="section p-10 text-[#006A71] dark:dark:text-gray-200">
       <h1 className="font-bold text-2xl mb-8">Top Destinations</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+      <div className="grid lg:grid-cols-2 gap-6">
         {cities.map((city, idx) => (
           <button
             onClick={() => handleCityWeatherSearch(city.name)}
             key={idx}
             className="group flex gap-5 items-center rounded-xl dark:hover:bg-gray-800 cursor-pointer transition-all duration-300 p-4 backdrop-blur-sm bg-card">
-            <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
+            <span className="lg:text-2xl text-4xl group-hover:scale-110 transition-transform duration-300">
               {city.icon}
             </span>
             <div className="text-left">
