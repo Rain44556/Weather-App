@@ -27,7 +27,7 @@ The purpose of this project is to develop a responsive weather application using
 - 🧠 Error handling and loading states
 - 🎨 Custom fonts and reusable component styling 
 
-# ⚙️ Tech Stack: 
+# Tech Stack: 
 
 ### 🧩 Core Libraries & Frameworks
 - ⚛️ React (v19) – Frontend library for building UI components
@@ -41,7 +41,7 @@ The purpose of this project is to develop a responsive weather application using
 ### 🎨 Styling
 - 🎨 Tailwind CSS (v4) – Utility-first CSS framework for styling
 
-### APIs & External Services
+### ☁️ APIs & External Services
 - 🔗 Axios – HTTP client for calling the OpenWeatherMap API
 - 🔥 Firebase – Used for hosting
 - 🎞️ Lottie React – Add Lottie animations for loading

@@ -1,5 +1,4 @@
 import React from 'react';
-import { HiOutlineArrowPathRoundedSquare } from 'react-icons/hi2';
 
 const ErrorMessage = ({error}) => {
     return (
@@ -9,7 +8,6 @@ const ErrorMessage = ({error}) => {
         </p>
         <p className="mb-3 text-gray-300">{error}</p>
         <button 
-        // onClick={handleRefresh}
         className=" text-white">
          Please Search Another City!
         </button>

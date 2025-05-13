@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios"
 import { CLEAR_HISTORY } from "./weatherTypes";
+
 export const fetchWeather = createAsyncThunk(
     'weather/fetchWeather',
     async (city, { rejectWithValue }) => {
